@@ -2,20 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
 .container {
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
-
 h1 {
     margin-bottom: 20px;
 }
-
+ 
 form {
     margin-bottom: 40px;
 }
@@ -55,4 +53,41 @@ button:hover {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.resume-form {
+    margin-bottom: 40px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Пользователь может изменять только высоту */
+}
+.resume-display {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 100%; /* Ограничение ширины */
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow-wrap: break-word; /* Поддержка переносов для старых браузеров */
+    white-space: pre-wrap; /* Сохранение форматирования строк */
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #0056b3;
 }
