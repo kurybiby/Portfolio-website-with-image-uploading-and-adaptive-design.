@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Мое Портфолио</h1>
+        
+        <!-- Форма для текста резюме -->
+        <form action="/" method="POST" class="resume-form">
+            <textarea name="resume_text" placeholder="Введите текст резюме..." required>{{ resume_text }}</textarea>
+            <button type="submit">Сохранить резюме</button>
+        </form>
+
+        <!-- Отображение текста резюме -->
+        <div class="resume-display">
+            <h2>Текущее резюме:</h2>
+            <p>{{ resume_text }}</p>
+        </div>
+
+        <!-- Форма для загрузки изображений -->
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*">
+            <button type="submit">Загрузить изображение</button>
+        </form>
+
+        <!-- Галерея изображений -->
+        <div class="gallery">
+            {% for image in images %}
+                <div class="image-card">
+                    <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Image">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
