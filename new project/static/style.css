@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
@@ -152,6 +152,4 @@ button:hover {
     }
 
     button {
-        width: 100%;
-    }
-}
+        width: 100%; height }
